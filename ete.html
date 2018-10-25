@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Abdelrhman</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<style>
+
+body{
+	background-image: linear-gradient(-90deg, #0F2027, #203A43);
+}
+.imagelogo {
+    height: 80px;
+    width: 100px;
+    width: 100%
+}
+video{
+
+    height: 300px;
+    margin-left: 15px;
+    width: 95%
+}
+.time-signboard {
+
+}
+.timenowtxt {
+
+}
+.reserv {
+    padding: 20px 0;
+}
+.box{
+	
+    float: left;
+}
+.box:first-of-type{
+	width: 10%
+}
+.box:nth-child(2){
+	width: 80%;
+	margin-bottom: 20px;
+}
+.box:last-of-type{
+	width: 10%
+}
+.table{
+	color: #FFF;
+	border-color: #FFF;
+	text-align: center;
+}
+.table th{
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div id="reserv" class="reserv">
+	<div class="box">
+		<img class="imagelogo" src="ete.png"/>
+	</div>
+
+	<div class="box">
+	    <video class="" autoplay controls loop>
+	        <source src="~/Models/DBSet/Core/images/users/mvc.MP4" type="video/mp4"/>
+	        <source src="~/Models/DBSet/Core/images/users/mvc.MP4" type="video/mp4"/>
+	    </video>
+	</div>
+
+	<div class="box">
+		<h3>yes</h3>
+	    <div class="timenowtxt">
+	       
+	    </div>
+	    <div id="Time" class="time-signboard">
+
+	    </div>
+	</div>
+	<div class="clear-fix"></div>
+
+	<div class="container">
+	    <div class="ibox decimal-e-margins">
+	        <div class="ibox-title">
+	            <h5><i id="gridLoader" class="fa fa-flag"></i></h5>
+	            <div class="ibox-Tools">
+	                <a class="collapse-link">
+	                    <i class="fa fa-chevron-up"></i>
+	                </a>
+	            </div>
+	        </div>
+	        <div id="gridBox" data-load="@Url.Action("_GetReservationHallBooking")" class="ibox-content">
+	            <table class="table table-bordered">
+				  <thead>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">First</th>
+				      <th scope="col">Last</th>
+				      <th scope="col">Handle</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">1</th>
+				      <td>Mark</td>
+				      <td>Otto</td>
+				      <td>@mdo</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">2</th>
+				      <td>Jacob</td>
+				      <td>Thornton</td>
+				      <td>@fat</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">3</th>
+				      <td>Larry</td>
+				      <td>the Bird</td>
+				      <td>@twitter</td>
+				    </tr>
+				  </tbody>
+				</table>
+	        </div>
+	    </div>
+	</div>
+</div>
+	
+	
+
+
+
+<!-- <script src="~/Scripts/jquery.form.min.js"></script> -->
+<script>
+        
+      
+    function startTime() {
+
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('Time').innerHTML =
+            h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+
+    }
+
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        }; // add zero in front of numbers < 10
+        return i;
+    }
+
+
+</script>
+
+<!-- <script src="~/Scripts/pages/Countries/BookingInformation.js"></script> -->
+
+    <!-- <script src="~/Scripts/jquery.form.min.js"></script> -->
+    <script>
+        
+        
+        function startTime() {
+
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('Time').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }; // add zero in front of numbers < 10
+            return i;
+        }
+
+
+    </script>
+    <!-- <script src="~/Scripts/pages/Countries/BookingInformation.js"></script> -->
+     <script src="jquery-1.12.2.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+   
+</body>
+</html>
